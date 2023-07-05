@@ -45,7 +45,13 @@ Widget _indicators(){
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               _percentage(),
+              const SizedBox(
+                width: 10,
+              ),
               _smallDivider(),
+              const SizedBox(
+                width: 10,
+              ),
               _hydration(),
             ],
           ),
@@ -96,7 +102,19 @@ Widget _smallDivider(){
   );
 }
 
-Widget _hydration() {
+Widget _hydration(){
+  return Column(
+    children: [
+      _intervalBar(),
+      Text(
+        'Hidratación',
+        style: Theme.of(context).textTheme.bodySmall,
+      ),
+    ],
+  );
+}
+
+Widget _intervalBar() {
   return Text(
                 '1.0',
                 style: Theme.of(context).textTheme.headlineSmall,
