@@ -18,6 +18,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.black,
         primaryColor: Colors.indigo,
+        appBarTheme: const AppBarTheme(
+          color: Colors.black,
+        ),
+        // extensions: <ThemeExtension<dynamic>>[
+        //   // CustomTheme(),
+        // ],
         textTheme: 
         const TextTheme(
           headlineSmall: TextStyle(color: Colors.white,

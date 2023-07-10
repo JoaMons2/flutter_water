@@ -14,6 +14,16 @@ class _StartScreenState extends State<StartScreen> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 20.0,
+        centerTitle: false,
+        leadingWidth: 0,
+        title: Text(
+          'Hola Agua',
+          style: Theme.of(context).textTheme.bodyMedium,
+        ),
+        //actions: [],
+        ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -125,9 +135,15 @@ Widget _hydration(){
 
 Widget _buttonReg(){
   return Center(
-            child: ElevatedButton(
-              onPressed: () { },
-              child: const Text('Hemos bebido'),
+            child: ConstrainedBox(
+              constraints: const BoxConstraints.tightFor(
+                width: 180,
+                height: 30,
+              ),
+              child: ElevatedButton(
+                onPressed: () { },
+                child: const Text('Hemos bebido agua'),
+              ),
             ),
           );
 }
