@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           color: Colors.black,
         ),
-        textTheme: 
+        textTheme:
         const TextTheme(
           headlineSmall: TextStyle(
             color: Colors.white,
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
           bodySmall: TextStyle(
-            color: Colors.white, 
+            color: Colors.white,
             fontSize: 12,
             fontWeight: FontWeight.bold
             ),

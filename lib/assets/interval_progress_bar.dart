@@ -6,11 +6,11 @@ class IntervalProgressBar extends StatefulWidget {
   const IntervalProgressBar({Key? key, required this.value}) : super(key: key);
 
   @override
-  State<IntervalProgressBar> createState() => 
+  State<IntervalProgressBar> createState() =>
   _IntervalProgressBarState();
 }
 
-class _IntervalProgressBarState extends 
+class _IntervalProgressBarState extends
 State<IntervalProgressBar> {
 
   List <Color> darkColors = [

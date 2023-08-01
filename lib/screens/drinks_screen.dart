@@ -19,12 +19,12 @@ class DrinksScreen extends StatelessWidget {
       ),
       body: GridView.count(
         crossAxisCount: 2,
-        children: 
+        children:
         [
           _oneCard(context),
-          _oneCard(context),
-          _oneCard(context),
-          _oneCard(context),
+          _twoCard(context),
+          _threeCard(context),
+          _fourCard(context),
         ],
           // List.generate(6, (index) {
           //   return Center(
@@ -44,12 +44,66 @@ class DrinksScreen extends StatelessWidget {
         Navigator.pop(context);
       },
       child: const SizedBox(
-        height: 100.0,
+        height: 5.0,
         child: Card(
-          elevation: 10.0,
-          color: Colors.cyanAccent,
+          elevation: 5.0,
+          color: Color.fromARGB(255, 27, 157, 205),
           child: Text(
-            'Esta es una tarjeta clicklabe, toca aquí'
+            'Tome 50 ml de agua'
+          ),
+        ),
+      ),
+    );
+  }
+
+Widget _twoCard(BuildContext context){
+    return GestureDetector(
+      onTap: () {
+        Navigator.pop(context);
+      },
+      child: const SizedBox(
+        height: 5.0,
+        child: Card(
+          elevation: 5.0,
+          color: Color.fromARGB(255, 27, 157, 205),
+          child: Text(
+            'Tome 150 ml de agua'
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _threeCard(BuildContext context){
+    return GestureDetector(
+      onTap: () {
+        Navigator.pop(context);
+      },
+      child: const SizedBox(
+        height: 5.0,
+        child: Card(
+          elevation: 5.0,
+          color: Color.fromARGB(255, 27, 157, 205),
+          child: Text(
+            'Tome 250 ml de agua'
+          ),
+        ),
+      ),
+    );
+  }
+
+    Widget _fourCard(BuildContext context){
+    return GestureDetector(
+      onTap: () {
+        Navigator.pop(context);
+      },
+      child: const SizedBox(
+        height: 5.0,
+        child: Card(
+          elevation: 5.0,
+          color: Color.fromARGB(255, 27, 157, 205),
+          child: Text(
+            'Tome 250 ml de agua'
           ),
         ),
       ),

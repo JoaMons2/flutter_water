@@ -11,6 +11,7 @@ class StartScreen extends StatefulWidget {
 }
 
 class  _StartScreenState extends State <StartScreen> {
+  int waterCount = 0;
 
 
   @override
@@ -58,13 +59,13 @@ class  _StartScreenState extends State <StartScreen> {
     );
   }
   Widget _totalMl(){
-    
+
       return Column(
         children: [
           SizedBox(
             height: 25.0,
             child: Text(
-              '0 mL',
+              '$waterCount mL',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
@@ -102,21 +103,21 @@ Widget _percentage(){
                   child: Stack(
                     alignment: Alignment.center,
                 children: [
-                 const SizedBox(
+                  const SizedBox(
                   width: 45,
                   height: 45,
-                   child: CircularProgressIndicator(
+                  child: CircularProgressIndicator(
                     strokeWidth: 6,
                     value: 0.3,
                     color: Color.fromARGB(255, 62, 139, 236),
                     backgroundColor: Color.fromARGB(255, 17, 50, 74),
+                  ),
                 ),
-                 ),
                 Text(
               '0 %',
               style: Theme.of(context).textTheme.bodySmall,
-            ),
-          ],
+                ),
+                ],
         ),
       ),
             Text(
@@ -126,7 +127,7 @@ Widget _percentage(){
             )
           ],
         );
-            
+
 }
 
 Widget _smallDividier(){
@@ -169,16 +170,18 @@ Widget _buttonReg(){
             ),
             child: ElevatedButton(
               onPressed: () {
+                setState(() {
+            waterCount += 250; // Incrementa el contador en 250 ml cada vez que se pulsa el botón.
+          });
                 Navigator.push(context,
                   MaterialPageRoute(builder:(context) => const DrinksScreen()),
                 );
               },
-              child: const Text('toma aguita',
+              child: const Text('tome agüita',
               ),
             ),
             )
           );
 
 }
-
 }
