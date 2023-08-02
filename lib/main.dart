@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -21,13 +21,11 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           color: Colors.black,
         ),
-        textTheme:
-        const TextTheme(
-          headlineSmall: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold),
+        textTheme: const TextTheme(
+          headlineSmall:
+              TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           bodyMedium: TextStyle(
-            color: Color.fromARGB(255, 76, 169, 228),
+            color: Color.fromARGB(255, 76, 169, 248),
             fontSize: 12,
             fontWeight: FontWeight.bold,
           ),
@@ -39,8 +37,8 @@ class MyApp extends StatelessWidget {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: const Color.fromARGB(255, 68, 154, 243),
-            foregroundColor: Colors.white,
+            //backgroundColor: const Color.fromARGB(255, 68, 154, 243),
+            //foregroundColor: Colors.white,
             textStyle: const TextStyle(
               fontWeight: FontWeight.bold,
             ),
@@ -48,7 +46,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const StartScreen(),
+      home: const StartScreen(hidratacion: 0,valueWater: 0,),
     );
   }
 }
