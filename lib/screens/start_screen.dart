@@ -129,9 +129,9 @@ class _StartScreenState extends State<StartScreen> {
         ),
 
       Text(
-        DateFormat('dd-MM-yy').format(DateTime.now()),
+        ' ${DateFormat('dd-MM-yy').format(DateTime.now())}',
         style: Theme.of(context).textTheme.bodySmall,
-        ),
+      ),
       ],
     );
   }

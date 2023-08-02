@@ -17,20 +17,20 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.black,
-        primaryColor: Colors.indigo,
+        primaryColor: const Color.fromARGB(255, 63, 84, 206),
         appBarTheme: const AppBarTheme(
           color: Colors.black,
         ),
         textTheme: const TextTheme(
           headlineSmall:
-              TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontWeight: FontWeight.bold),
           bodyMedium: TextStyle(
             color: Color.fromARGB(255, 76, 169, 248),
             fontSize: 12,
             fontWeight: FontWeight.bold,
           ),
           bodySmall: TextStyle(
-            color: Colors.white,
+            color: Color.fromARGB(255, 255, 255, 255),
             fontSize: 12,
             fontWeight: FontWeight.bold
             ),
